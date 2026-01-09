@@ -67,7 +67,7 @@ export default function Footer() {
                 <strong>Distance:</strong> 1.5km from WSU Campus
               </p>
               <a
-                href="https://wa.me/27123456789"
+                href="https://wa.me/27839940008"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="inline-flex items-center space-x-2 text-terracotta hover:text-terracotta-light transition-colors"
