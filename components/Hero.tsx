@@ -10,7 +10,7 @@ export default function Hero() {
       {/* Background with Image Overlay */}
       <div className="absolute inset-0 z-0">
         <Image
-          src="/assets/backgrounds/hero-final.png"
+          src="/assets/backgrounds/hero-lounge-small.png"
           alt="Concordia House Student Lifestyle"
           fill
           className="object-cover object-top"

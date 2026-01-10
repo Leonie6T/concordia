@@ -19,7 +19,6 @@ export default function Header() {
 
   const navLinks = [
     { href: '/', label: 'Home' },
-    { href: '/apply', label: 'Waitlist' },
     { href: '/rules', label: 'Rules' },
   ]
 
@@ -52,9 +51,18 @@ export default function Header() {
             ))}
             <Link
               href="/incident"
-              className="text-sm font-medium text-gray-700 hover:text-terracotta transition-colors px-3 py-1.5 rounded-lg hover:bg-gray-100"
+              className="text-xs font-semibold text-gray-500 hover:text-navy transition-colors flex items-center gap-1 ml-4"
             >
+              <svg xmlns="http://www.w3.org/2000/svg" className="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L3.34 16c-.77 1.333.192 3 1.732 3z" />
+              </svg>
               Report Incident
+            </Link>
+            <Link
+              href="/apply"
+              className="bg-terracotta hover:bg-terracotta-dark text-white text-sm font-bold py-2.5 px-6 rounded-full shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-0.5 ml-2"
+            >
+              Apply / Waitlist
             </Link>
           </div>
 
