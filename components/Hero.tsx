@@ -26,6 +26,21 @@ export default function Hero() {
             transition={{ duration: 0.8 }}
           >
             <motion.div
+              initial={{ scale: 0.9, opacity: 0 }}
+              animate={{ scale: 1, opacity: 1 }}
+              transition={{ duration: 0.6 }}
+              className="relative w-48 h-48 mx-auto mb-8"
+            >
+              <Image
+                src="/assets/logo/Concordia House.png"
+                alt="Concordia House Logo"
+                fill
+                className="object-contain"
+                priority
+              />
+            </motion.div>
+
+            <motion.div
               initial={{ scale: 0.9 }}
               animate={{ scale: 1 }}
               transition={{ duration: 0.6, delay: 0.2 }}

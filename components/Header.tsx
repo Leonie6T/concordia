@@ -26,23 +26,15 @@ export default function Header() {
   return (
     <header
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${scrolled
-          ? 'bg-white/98 backdrop-blur-lg shadow-xl border-b border-gray-100'
-          : 'bg-white/90 backdrop-blur-md'
+        ? 'bg-white/98 backdrop-blur-lg shadow-xl border-b border-gray-100'
+        : 'bg-white/90 backdrop-blur-md'
         }`}
     >
       <nav className="container mx-auto px-4 py-4">
         <div className="flex items-center justify-between">
           {/* Logo */}
           <Link href="/" className="flex items-center space-x-3 group">
-            <div className="relative w-12 h-12 transition-transform duration-300 group-hover:scale-110">
-              <Image
-                src="/assets/logo/Concordia House.png"
-                alt="Concordia House Logo"
-                fill
-                className="object-contain"
-                priority
-              />
-            </div>
+
             <span className="text-xl font-extrabold text-navy hidden sm:block group-hover:text-terracotta transition-colors">Concordia House</span>
           </Link>
 
