@@ -13,7 +13,7 @@ export default function Hero() {
           src="/assets/backgrounds/hero-final.png"
           alt="Concordia House Student Lifestyle"
           fill
-          className="object-cover"
+          className="object-cover object-top"
           priority
           quality={100}
         />
