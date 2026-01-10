@@ -10,10 +10,10 @@ export default function Hero() {
       {/* Background with Image Overlay */}
       <div className="absolute inset-0 z-0">
         <Image
-          src="/assets/backgrounds/hero-lounge-small.png"
+          src="/assets/backgrounds/hero-lounge-clean.png"
           alt="Concordia House Student Lifestyle"
           fill
-          className="object-cover object-top"
+          className="object-cover object-center"
           priority
           quality={100}
         />
