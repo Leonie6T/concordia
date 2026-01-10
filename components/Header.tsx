@@ -2,13 +2,13 @@
 
 import { useState, useEffect } from 'react'
 import Link from 'next/link'
+import Image from 'next/image'
 import { motion, AnimatePresence } from 'framer-motion'
 
 export default function Header() {
   const [isOpen, setIsOpen] = useState(false)
   const [scrolled, setScrolled] = useState(false)
 
-  // Handle scroll effect
   useEffect(() => {
     const handleScroll = () => {
       setScrolled(window.scrollY > 20)
@@ -19,142 +19,102 @@ export default function Header() {
 
   const navLinks = [
     { href: '/', label: 'Home' },
-    { href: '/rules', label: 'Living Rules' },
+    { href: '/apply', label: 'Waitlist' },
+    { href: '/rules', label: 'Rules' },
   ]
 
   return (
     <header
-      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-500 ease-in-out ${scrolled
-        ? 'py-3 bg-white/80 backdrop-blur-md shadow-sm border-b border-gray-100/50'
-        : 'py-6 bg-transparent'
+      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${scrolled
+        ? 'bg-white/98 backdrop-blur-lg shadow-xl border-b border-gray-100'
+        : 'bg-white/90 backdrop-blur-md'
         }`}
     >
-      <nav className="container mx-auto px-6 md:px-12">
+      <nav className="container mx-auto px-4 py-4">
         <div className="flex items-center justify-between">
           {/* Logo */}
-          <Link href="/" className="flex items-center group relative z-50">
-            <span className={`font-serif font-bold tracking-tight text-navy transition-all duration-300 ${scrolled ? 'text-2xl' : 'text-3xl'
-              }`}>
-              Concordia House
-            </span>
+          <Link href="/" className="flex items-center space-x-3 group">
+
+            <span className="text-xl font-extrabold text-navy hidden sm:block group-hover:text-terracotta transition-colors">Concordia House</span>
           </Link>
 
           {/* Desktop Navigation */}
-          <div className="hidden md:flex items-center gap-8">
-            <div className="flex items-center gap-6">
-              {navLinks.map((link) => (
-                <Link
-                  key={link.href}
-                  href={link.href}
-                  className="text-navy/80 hover:text-terracotta font-medium text-sm tracking-wide transition-colors relative group"
-                >
-                  {link.label}
-                  <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-terracotta/30 group-hover:w-full transition-all duration-300 ease-out"></span>
-                </Link>
-              ))}
-
-              {/* Secondary Action: Incident Report */}
+          <div className="hidden md:flex items-center space-x-6">
+            {navLinks.map((link) => (
               <Link
-                href="/incident"
-                className="text-xs font-medium text-gray-400 hover:text-navy transition-colors flex items-center gap-1 group"
+                key={link.href}
+                href={link.href}
+                className="text-navy font-semibold hover:text-terracotta transition-colors duration-300 relative group"
               >
-                <svg className="w-3 h-3 group-hover:text-terracotta transition-colors" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L3.34 16c-.77 1.333.192 3 1.732 3z" />
-                </svg>
-                Report Icon
+                {link.label}
+                <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-terracotta group-hover:w-full transition-all duration-300"></span>
               </Link>
-            </div>
-
-            {/* Separator */}
-            <div className={`h-6 w-px bg-gray-200 ${scrolled ? 'opacity-100' : 'opacity-50'}`}></div>
-
-            {/* Primary CTA */}
+            ))}
             <Link
-              href="/apply"
-              className="group relative px-6 py-2.5 bg-terracotta text-white text-sm font-semibold rounded-full overflow-hidden shadow-lg hover:shadow-terracotta/30 transition-all duration-300 transform hover:-translate-y-0.5"
+              href="/incident"
+              className="text-sm font-medium text-gray-700 hover:text-terracotta transition-colors px-3 py-1.5 rounded-lg hover:bg-gray-100"
             >
-              <div className="absolute inset-0 w-full h-full bg-gradient-to-r from-transparent via-white/20 to-transparent -translate-x-full group-hover:animate-shimmer" />
-              <span className="relative flex items-center gap-2">
-                Join Waitlist
-                <svg className="w-4 h-4 transition-transform group-hover:translate-x-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
-                </svg>
-              </span>
+              Report Incident
             </Link>
           </div>
 
           {/* Mobile Menu Button */}
           <button
             onClick={() => setIsOpen(!isOpen)}
-            className="md:hidden relative z-50 p-2 text-navy hover:bg-gray-100/50 rounded-full transition-colors"
+            className="md:hidden p-2 text-navy focus:outline-none hover:bg-gray-100 rounded-lg transition-colors"
             aria-label="Toggle menu"
           >
-            <div className="w-6 h-5 flex flex-col justify-between">
-              <span className={`w-full h-0.5 bg-current transform transition-all duration-300 ${isOpen ? 'rotate-45 translate-y-2' : ''}`} />
-              <span className={`w-full h-0.5 bg-current transition-opacity duration-300 ${isOpen ? 'opacity-0' : 'opacity-100'}`} />
-              <span className={`w-full h-0.5 bg-current transform transition-all duration-300 ${isOpen ? '-rotate-45 -translate-y-2.5' : ''}`} />
-            </div>
+            <svg
+              className="w-6 h-6"
+              fill="none"
+              strokeLinecap="round"
+              strokeLinejoin="round"
+              strokeWidth="2"
+              viewBox="0 0 24 24"
+              stroke="currentColor"
+            >
+              {isOpen ? (
+                <path d="M6 18L18 6M6 6l12 12" />
+              ) : (
+                <path d="M4 6h16M4 12h16M4 18h16" />
+              )}
+            </svg>
           </button>
         </div>
-      </nav>
 
-      {/* Mobile Navigation Overlay */}
-      <AnimatePresence>
-        {isOpen && (
-          <>
+        {/* Mobile Navigation */}
+        <AnimatePresence>
+          {isOpen && (
             <motion.div
-              initial={{ opacity: 0 }}
-              animate={{ opacity: 1 }}
-              exit={{ opacity: 0 }}
-              onClick={() => setIsOpen(false)}
-              className="fixed inset-0 bg-black/20 backdrop-blur-sm z-40 md:hidden"
-            />
-            <motion.div
-              initial={{ x: '100%' }}
-              animate={{ x: 0 }}
-              exit={{ x: '100%' }}
-              transition={{ type: "spring", damping: 25, stiffness: 200 }}
-              className="fixed top-0 right-0 bottom-0 w-3/4 max-w-sm bg-white shadow-2xl z-50 md:hidden flex flex-col pt-24 px-8 pb-8"
+              initial={{ opacity: 0, height: 0 }}
+              animate={{ opacity: 1, height: 'auto' }}
+              exit={{ opacity: 0, height: 0 }}
+              className="md:hidden mt-4 overflow-hidden"
             >
-              <div className="flex flex-col space-y-6">
+              <div className="flex flex-col space-y-2 pb-4">
                 {navLinks.map((link) => (
                   <Link
                     key={link.href}
                     href={link.href}
                     onClick={() => setIsOpen(false)}
-                    className="text-2xl font-serif text-navy hover:text-terracotta transition-colors"
+                    className="text-navy font-semibold hover:text-terracotta hover:bg-gray-50 transition-all rounded-lg px-4 py-3"
                   >
                     {link.label}
                   </Link>
                 ))}
-
-                <hr className="border-gray-100" />
-
                 <Link
-                  href="/apply"
+                  href="/incident"
                   onClick={() => setIsOpen(false)}
-                  className="w-full py-4 bg-terracotta text-white text-center font-bold rounded-xl shadow-lg hover:bg-terracotta-dark transition-colors"
+                  className="text-sm font-medium text-gray-700 hover:text-terracotta hover:bg-gray-50 transition-all rounded-lg px-4 py-3"
                 >
-                  Join Waitlist
+                  Report Incident
                 </Link>
-
-                <div className="mt-auto">
-                  <Link
-                    href="/incident"
-                    onClick={() => setIsOpen(false)}
-                    className="flex items-center gap-2 text-sm text-gray-400 font-medium"
-                  >
-                    <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L3.34 16c-.77 1.333.192 3 1.732 3z" />
-                    </svg>
-                    Report Incident
-                  </Link>
-                </div>
               </div>
             </motion.div>
-          </>
-        )}
-      </AnimatePresence>
+          )}
+        </AnimatePresence>
+      </nav>
     </header>
   )
 }
+
