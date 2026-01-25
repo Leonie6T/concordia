@@ -35,14 +35,14 @@ const rulesSections = [
       'Study areas must be respected during exam periods',
       'Noise levels must be kept to a minimum during study hours',
       'Residents are expected to attend classes regularly',
-      'Academic support services are available upon request',
+
     ],
   },
   {
     title: 'Safety & Security',
     rules: [
-      'All residents must carry their access cards at all times',
-      'Do not share access codes or keys with others',
+      'All residents must carry their access keys at all times',
+      'Do not share access codes or keys with others or use your access keys to allow others to enter.',
       'Report any security concerns immediately',
       'Emergency exits must remain clear at all times',
       'Fire safety equipment must not be tampered with',
@@ -50,17 +50,7 @@ const rulesSections = [
       'Suspicious activity must be reported to management',
     ],
   },
-  {
-    title: 'Payment & Fees',
-    rules: [
-      'Rent must be paid by the 1st of each month',
-      'Late payment fees apply after the 5th',
-      'NSFAS payments will be processed according to funding schedule',
-      'Deposit is required upon acceptance',
-      'Refund policy applies as per contract terms',
-      'Additional fees may apply for damages or violations',
-    ],
-  },
+
   {
     title: 'Disciplinary Actions',
     rules: [
@@ -112,9 +102,8 @@ export default function RulesPage() {
                   {section.title}
                 </h2>
                 <svg
-                  className={`w-5 h-5 text-terracotta transition-transform duration-300 ${
-                    openSection === index ? 'rotate-180' : ''
-                  }`}
+                  className={`w-5 h-5 text-terracotta transition-transform duration-300 ${openSection === index ? 'rotate-180' : ''
+                    }`}
                   fill="none"
                   strokeLinecap="round"
                   strokeLinejoin="round"
@@ -167,7 +156,7 @@ export default function RulesPage() {
             rules, please don't hesitate to contact management.
           </p>
           <a
-            href="https://wa.me/27123456789"
+            href="https://wa.me/27839940008"
             target="_blank"
             rel="noopener noreferrer"
             className="inline-flex items-center space-x-2 btn-primary"
