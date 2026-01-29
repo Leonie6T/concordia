@@ -88,7 +88,7 @@ export default function Hero() {
               {[
                 { value: "46", label: "Beds Available" },
                 { value: "1.5km", label: "From WSU Campus" },
-                { value: "NSFAS", label: "Accredited (PENDING)" },
+                { value: "NSFAS", label: "Grade A Accredited" },
                 { value: "400m", label: "From Nonesi Mall" }
               ].map((stat, index) => (
                 <motion.div

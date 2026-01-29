@@ -1,9 +1,9 @@
 'use client'
 
 import { motion } from 'framer-motion'
-import { 
-  HomeIcon, 
-  ShieldCheckIcon, 
+import {
+  HomeIcon,
+  ShieldCheckIcon,
   AcademicCapIcon,
   MapPinIcon,
   WifiIcon,
@@ -38,7 +38,7 @@ const features = [
   },
   {
     icon: LockClosedIcon,
-    title: 'NSFAS Accredited (PENDING)',
+    title: 'NSFAS Grade A Accredited',
     description: 'Approved for NSFAS funding applications',
   },
 ]

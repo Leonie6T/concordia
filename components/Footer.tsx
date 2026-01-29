@@ -87,7 +87,7 @@ export default function Footer() {
 
         <div className="border-t border-gray-700 mt-8 pt-8 text-center text-sm text-gray-400">
           <p>&copy; {new Date().getFullYear()} Concordia House. All rights reserved.</p>
-          <p className="mt-2">NSFAS Accredited (PENDING) | Exclusive Residence</p>
+          <p className="mt-2">NSFAS Grade A Accredited | Exclusive Residence</p>
         </div>
       </div>
     </footer>

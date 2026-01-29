@@ -10,7 +10,7 @@ const playfair = Playfair_Display({ subsets: ['latin'], variable: '--font-playfa
 
 export const metadata: Metadata = {
   title: 'Concordia House - Student Accommodation in Komani',
-  description: 'Exclusive student residence in Komani, South Africa. NSFAS accredited (pending), modern facilities, 1.5km from Walter Sisulu University. Apply now for 2024.',
+  description: 'Exclusive student residence in Komani, South Africa. NSFAS Grade A accredited, modern facilities, 1.5km from Walter Sisulu University. Apply now for 2024.',
   keywords: 'student accommodation, Komani, Walter Sisulu University, NSFAS, student residence, Komani accommodation',
 }
 
