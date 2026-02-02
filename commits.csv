@@ -1,0 +1,36 @@
+﻿ad85e0e|2026-01-30 11:30:42 +0200|Revert "Update competition headline to 'Celebration Party for a Full Residence'"
+aabda8e|2026-01-30 08:04:19 +0200|Update competition headline to 'Celebration Party for a Full Residence'
+8ac79dd|2026-01-30 00:27:14 +0200|Update all NSFAS buttons to link to official NSFAS accommodations portal
+347a4af|2026-01-30 00:18:45 +0200|Update competition progress: 1/46 students signed up
+09a05b7|2026-01-30 00:15:50 +0200|Expert redesign of competition panel with premium aesthetics and conversion optimization
+ba8a277|2026-01-30 00:11:12 +0200|Replace 'waitlist' with 'Apply on NSFAS portal' across all CTAs
+4567d88|2026-01-30 00:05:12 +0200|Add competition feature: R5K braai & party prize for filling residence by Feb 23
+f76f4bf|2026-01-29 23:54:38 +0200|Update NSFAS accreditation status to Grade A
+b634afe|2026-01-25 20:06:25 +0200|Fix Prisma schema to use Vercel prefixed env vars
+23f92b0|2026-01-25 16:49:55 +0200|Update rules content and ensure consistent WhatsApp number
+496aa61|2026-01-25 16:44:48 +0200|Configure project for Vercel deployment (Postgres migration)
+f40a2db|2026-01-10 17:17:45 +0200|fix(ui): adjust font size of report incident link to match header text
+b1d7bfd|2026-01-10 17:06:15 +0200|fix(ui): improve header contrast on scroll
+01aaa49|2026-01-10 16:49:30 +0200|feat(ui): update hero image to clean walls version and adjust cropping
+9194fdd|2026-01-10 16:19:29 +0200|feat(ui): update hero image and refine header CTAs
+2a08ec8|2026-01-10 13:07:46 +0200|Revert "feat(ui): redesign header with glassmorphism and premium aesthetics"
+109c165|2026-01-10 13:04:09 +0200|feat(ui): redesign header with glassmorphism and premium aesthetics
+363d9b6|2026-01-10 10:56:04 +0200|Update hero background: group of 3 friends in dorm
+3262f49|2026-01-10 10:52:25 +0200|Fix hero image cropping by aligning to top
+05ca4b7|2026-01-10 10:50:07 +0200|Update hero background: single student influencer style
+e95fa36|2026-01-10 09:16:21 +0200|Update hero background: remove buildings, nature only
+969f718|2026-01-10 07:59:19 +0200|Update hero background to generated bright SA student image
+7438eaf|2026-01-10 07:29:15 +0200|Use user-provided ReplacementImage.jpg for hero background
+d045457|2026-01-10 07:21:04 +0200|Update hero background image to match SA context
+719ec12|2026-01-10 06:59:38 +0200|Implement Premium Hero design with cinematic background and glassmorphism
+3fb7ddb|2026-01-10 06:52:34 +0200|Enlarge hero logo
+b9000b0|2026-01-10 06:49:47 +0200|Move logo from Header to Hero section
+99c83db|2026-01-10 06:50:16 +0200|WIP on main: 4f1905f Move logo from Header to Hero section
+e0d1cdc|2026-01-10 06:50:16 +0200|index on main: 4f1905f Move logo from Header to Hero section
+4f1905f|2026-01-10 06:49:47 +0200|Move logo from Header to Hero section
+ac222f8|2026-01-09 17:29:39 +0200|Delete .next directory
+2779fd9|2026-01-09 17:22:01 +0200|Add postinstall script for Vercel
+5155a50|2026-01-09 17:17:01 +0200|Add build artifacts
+9bf3753|2026-01-09 17:15:04 +0200|Update WhatsApp number
+fac1aa3|2026-01-09 17:02:13 +0200|Fix prisma generator provider
+58d5a67|2026-01-09 16:52:11 +0200|Initial commit

@@ -1,12 +1,19 @@
+'use client'
+
+import { useState } from 'react'
 import Link from 'next/link'
 import Hero from '@/components/Hero'
 import Features from '@/components/Features'
 import Location from '@/components/Location'
 import ImageGallery from '@/components/ImageGallery'
+import NSFASModal from '@/components/NSFASModal'
 
 export default function Home() {
+  const [isModalOpen, setIsModalOpen] = useState(false)
+
   return (
     <>
+      <NSFASModal isOpen={isModalOpen} onClose={() => setIsModalOpen(false)} />
       <Hero />
       <Features />
       <ImageGallery />
@@ -28,13 +35,13 @@ export default function Home() {
             Limited spaces available. Join our Waitlist now to secure your spot at this exclusive residence.
           </p>
           <div className="flex justify-center gap-4">
-            <Link
-              href="/apply"
+            <button
+              onClick={() => setIsModalOpen(true)}
               className="inline-flex items-center justify-center px-8 py-3 text-base font-medium text-white bg-terracotta rounded-full hover:bg-terracotta/90 transition-colors"
             >
-              <span className="relative z-10">Join our Waitlist</span>
+              <span className="relative z-10">Apply / Waitlist</span>
               <div className="absolute inset-0 bg-terracotta-dark transform scale-x-0 group-hover:scale-x-100 transition-transform duration-300 origin-left"></div>
-            </Link>
+            </button>
           </div>
         </div>
       </section>
