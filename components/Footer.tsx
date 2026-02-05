@@ -61,6 +61,14 @@ export default function Footer() {
                     Report Incident
                   </Link>
                 </li>
+                <li>
+                  <Link
+                    href="/suggestions"
+                    className="text-gray-300 hover:text-terracotta transition-colors"
+                  >
+                    Suggestion Box
+                  </Link>
+                </li>
               </ul>
             </div>
 

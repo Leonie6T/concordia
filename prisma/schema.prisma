@@ -45,3 +45,12 @@ model Incident {
   reporterContact String
   createdAt      DateTime @default(now())
 }
+
+model Suggestion {
+  id          String   @id @default(cuid())
+  name        String
+  email       String?
+  suggestion  String
+  category    String
+  createdAt   DateTime @default(now())
+}
