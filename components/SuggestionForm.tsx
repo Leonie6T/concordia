@@ -13,7 +13,7 @@ const codeSchema = z.object({
 })
 
 const suggestionSchema = z.object({
-    name: z.string().min(2, 'Please enter your name'),
+    name: z.string().optional().or(z.literal('')),
     email: z.string().email('Please enter a valid email').optional().or(z.literal('')),
     category: z.enum(['facilities', 'activities', 'food', 'rules', 'other'], {
         required_error: 'Please select a category',
@@ -201,13 +201,13 @@ export default function SuggestionForm() {
                         <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                             <div>
                                 <label className="block text-sm font-medium text-gray-700 mb-2">
-                                    Your Name *
+                                    Your Name (Optional)
                                 </label>
                                 <input
                                     type="text"
                                     {...register('name')}
                                     className="input-field"
-                                    placeholder="Enter your name"
+                                    placeholder="Enter your name or leave blank for anonymous"
                                 />
                                 {errors.name && (
                                     <p className="mt-1 text-sm text-red-600">{errors.name.message}</p>

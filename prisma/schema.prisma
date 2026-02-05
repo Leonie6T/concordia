@@ -48,7 +48,7 @@ model Incident {
 
 model Suggestion {
   id          String   @id @default(cuid())
-  name        String
+  name        String?
   email       String?
   suggestion  String
   category    String
