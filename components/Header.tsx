@@ -22,6 +22,7 @@ export default function Header() {
   const navLinks = [
     { href: '/', label: 'Home' },
     { href: '/rules', label: 'Rules' },
+    { href: '/suggestions', label: 'Suggestion Box' },
   ]
 
   return (
@@ -122,6 +123,12 @@ export default function Header() {
                   >
                     Report Incident
                   </Link>
+                  <button
+                    onClick={() => { setIsModalOpen(true); setIsOpen(false); }}
+                    className="bg-terracotta hover:bg-terracotta-dark text-white text-sm font-bold py-3 px-4 rounded-lg shadow-lg transition-all text-left"
+                  >
+                    Apply / Waitlist
+                  </button>
                 </div>
               </motion.div>
             )}
