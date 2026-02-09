@@ -31,7 +31,7 @@ const rulesSections = [
     title: '4. Visitors',
     rules: [
       'Concordia House is a female-only residence. For the safety and comfort of all students, only female visitors are permitted on the premises.',
-      'Visitors are permitted only during approved visiting hours, which are 09:00 to 21:00, unless otherwise determined by management.',
+      'Visitors are permitted only during approved visiting hours, which are 10:00 to 21:00, unless otherwise determined by management.',
       'Visiting hours may be amended, reduced, or suspended at the discretion of management where safety, security, behavioural, capacity, or operational considerations require it.',
       'A resident may have no more than two (2) visitors at any one time.',
       'All visitors must be signed in and signed out at security or reception and may be required to present valid identification.',

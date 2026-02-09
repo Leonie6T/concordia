@@ -1,14 +1,11 @@
-// This is your Prisma schema file,
-// learn more about it in the docs: https://pris.ly/d/prisma-schema
-
 generator client {
   provider = "prisma-client-js"
 }
 
 datasource db {
-  provider = "postgresql"
-  url = env("concordiaDB_POSTGRES_PRISMA_URL") // uses connection pooling
-  directUrl = env("concordiaDB_POSTGRES_URL_NON_POOLING") // uses a direct connection
+  provider  = "postgresql"
+  url       = env("concordiaDB_POSTGRES_PRISMA_URL")
+  directUrl = env("concordiaDB_POSTGRES_URL_NON_POOLING")
 }
 
 model Application {
@@ -35,22 +32,22 @@ model Interest {
 }
 
 model Incident {
-  id             String   @id @default(cuid())
-  date           DateTime
-  time           String
-  location       String
-  description    String
-  type           String
-  reporterName   String
+  id              String   @id @default(cuid())
+  date            DateTime
+  time            String
+  location        String
+  description     String
+  type            String
+  reporterName    String
   reporterContact String
-  createdAt      DateTime @default(now())
+  createdAt       DateTime @default(now())
 }
 
 model Suggestion {
-  id          String   @id @default(cuid())
-  name        String?
-  email       String?
-  suggestion  String
-  category    String
-  createdAt   DateTime @default(now())
+  id         String   @id @default(cuid())
+  name       String?
+  email      String?
+  suggestion String
+  category   String
+  createdAt  DateTime @default(now())
 }
